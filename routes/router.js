@@ -45,6 +45,26 @@ router.get('/', async (req, res) => {
 	}
 });
 
+router.get('/pets', async (req, res) => {
+	console.log("page hit");
+	try {
+		const pets = await petModel.findAll({ attributes: ['pet_id', 'name'] }); 
+		if (pets === null) {
+			res.render('error', { message: 'Error connecting to MySQL' });
+			console.log("Error connecting to userModel");
+		}
+		else {
+			console.log(pets);
+			res.render('pet', { allPets: pets });
+		}
+	}
+	catch (ex) {
+		res.render('error', { message: 'Error connecting to MySQL' });
+		console.log("Error connecting to MySQL");
+		console.log(ex);
+	}
+});
+
 router.get('/deleteUser', async (req, res) => {
 	try {
 	console.log("delete user");
