@@ -28,14 +28,14 @@ const passwordPepper = "SeCretPeppa4MySal+";
 router.get('/', async (req, res) => {
 	console.log("page hit");
 	try {
-		const users = await userModel.findAll({ attributes: ['web_user_id', 'first_name', 'last_name', 'email'] }); //{where: {web_user_id: 1}}
+		const pets = await petModel.findAll({ attributes: ['pet_id', 'name'] }); 
 		if (users === null) {
 			res.render('error', { message: 'Error connecting to MySQL' });
 			console.log("Error connecting to userModel");
 		}
 		else {
-			console.log(users);
-			res.render('index', { allUsers: users });
+			console.log(pets);
+			res.render('index', { allPets: pets });
 		}
 	}
 	catch (ex) {
