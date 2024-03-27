@@ -29,7 +29,7 @@ router.get('/', async (req, res) => {
 	console.log("page hit");
 	try {
 		const pets = await petModel.findAll({ attributes: ['pet_id', 'name'] }); 
-		if (users === null) {
+		if (pets === null) {
 			res.render('error', { message: 'Error connecting to MySQL' });
 			console.log("Error connecting to userModel");
 		}
