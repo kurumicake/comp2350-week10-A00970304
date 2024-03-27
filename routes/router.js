@@ -94,3 +94,4 @@ router.get('/deleteUser', async (req, res) => {
 		});
 
 module.exports = router;
+
