@@ -81,7 +81,7 @@ router.get('/deleteUser', async (req, res) => {
 		res.redirect("/");
 	}
 	catch (ex) {
-		res.render('error', { message: 'Error connecting to MySQL' });
+		res.render('error', { message: 'Error connecting to MySQL here' });
 		console.log("Error connecting to MySQL");
 		console.log(ex);
 	}
