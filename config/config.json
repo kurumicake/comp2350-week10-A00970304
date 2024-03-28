@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "root",
+    "password": "Coding@626929a44",
+    "database": "pets_week10",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": "Coding@626929a44",
+    "database": "pets_week10",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "freedb_cwan_main",
+    "password": "n!?hTMRsJ2GNPM*",
+    "database": "freedb_comp2350-week2-A00970304",
+    "host": "sql.freedb.tech",
+    "dialect": "mysql"
+  }
+}
