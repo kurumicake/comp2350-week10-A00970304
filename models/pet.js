@@ -29,3 +29,4 @@ const PetModel = sequelize.define('pet', {
 PetModel.belongsTo(userModel , { as: 'owner', timestamps: false, foreignKey: 'web_user_id'}); userModel.hasMany(PetModel , { as: 'pets', timestamps: false, foreignKey: 'web_user_id'});
 
 module.exports = PetModel;
+ 
