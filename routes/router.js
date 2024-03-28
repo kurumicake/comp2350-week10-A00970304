@@ -90,6 +90,7 @@ router.get('/deleteUser', async (req, res) => {
 router.post('/addUser', async (req, res) => {
 	try {
 		console.log("form submit");
+		console.log(req.body)
 		if (!req.body.password) {
 			throw new TypeError('Password is missing from the request.');
 		}
