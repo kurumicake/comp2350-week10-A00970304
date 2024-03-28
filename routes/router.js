@@ -91,10 +91,6 @@ router.post('/addUser', async (req, res) => {
 	try {
 		console.log("form submit");
 		console.log(req.body)
-		if (!req.body.password) {
-			throw new TypeError('Password is missing from the request.');
-		}
-
 		const password_salt = crypto.createHash('sha512');
 		password_salt.update(uuid());
 		const password_hash = crypto.createHash('sha512');
